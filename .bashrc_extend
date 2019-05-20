@@ -24,3 +24,6 @@ alias rm="rm -I --preserve-root"
 
 # Always use vim
 alias vi="vim"
+
+# Create necessary parent directories
+alias mkdir="mkdir -p"
