@@ -1,7 +1,7 @@
 " Highlight the line that the cursor is on.
 set cursorline
-hi CursorLine          cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
-hi CursorColumn        cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+hi CursorLine          cterm=NONE ctermbg=darkgrey guibg=darkgrey
+hi CursorColumn        cterm=NONE ctermbg=darkgrey guibg=darkgrey
 
 " Enable line numbers
 set number
