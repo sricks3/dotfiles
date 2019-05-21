@@ -6,7 +6,7 @@ hi CursorColumn        cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey 
 " Enable line numbers
 set number
 
-"Enable syntax highlighting
+" Enable syntax highlighting
 syntax on
 
 " Highlight searches
