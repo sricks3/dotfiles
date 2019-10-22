@@ -1,0 +1,71 @@
+################################################################################
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+# You must source this file in your .bashrc (or other shell profile file) in
+# order for any of this to apply.
+#
+# All of this should work in bash. I THINK that this will all work in zsh as
+# well, but I can't guarantee it. I can't guarantee any compatibility with other
+# shells.
+#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+################################################################################
+
+################################################################################
+# GENERAL CONFIGURATION
+################################################################################
+# Set default command line editor to vim if it is installed, and use vim instead of vi
+if hash vim 2>/dev/null; then
+	export VISUAL=vim
+	export EDITOR="$VISUAL"
+	# Use vim instead of vi
+	alias vi="vim"
+fi
+
+# Ask for confirmation when running potentially dangerous commands
+alias cp="cp -i"									# Ask before copying over an existing file
+alias ln="ln -i"									# Ask before creating a link
+alias mv="mv -ib"									# Ask before overwriting, and make a backup
+alias rm="rm -I --preserve-root"	# Ask once before removing  more  than  three files or  when removing  recursively
+
+# Create necessary parent directories
+alias mkdir="mkdir -p"
+
+# ls abbreviations
+alias ll="ls -lhA"
+alias la="ls -lha"
+alias sl="ls"
+
+################################################################################
+# COLORIZE
+################################################################################
+alias diff='diff --color=auto'
+alias grep="grep --color=auto"
+
+# ls
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+else # macOS `ls`
+	colorflag="-G"
+fi
+alias ls="ls ${colorflag}"
+
+# less and man
+export LESS=-R				#less
+export LESS_TERMCAP_mb=$'\E[1;31m'	# begin blink
+export LESS_TERMCAP_md=$'\E[1;36m'	# begin bold
+export LESS_TERMCAP_me=$'\E[0m'		# reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m'	# begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'		# reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'	# begin underline
+export LESS_TERMCAP_ue=$'\E[0m'		# reset underline
+man() {					#all of the less stuff but for man
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
