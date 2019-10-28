@@ -69,3 +69,9 @@ man() {					#all of the less stuff but for man
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
+
+###############################################################################
+# HUGO STUFF
+###############################################################################
+# Start hugo server as a background process and log output
+alias gohugo="nohup hugo server &>> nohup-hugo-server.log &"
