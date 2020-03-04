@@ -25,7 +25,7 @@ fi
 # Ask for confirmation when running potentially dangerous commands
 alias cp="cp -i"									# Ask before copying over an existing file
 alias ln="ln -i"									# Ask before creating a link
-alias mv="mv -ib"									# Ask before overwriting, and make a backup
+alias mv="mv -i"									# Ask before overwriting
 alias rm="rm -I --preserve-root"	# Ask once before removing  more  than  three files or  when removing  recursively
 
 # Create necessary parent directories
