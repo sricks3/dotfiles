@@ -26,7 +26,6 @@ fi
 alias cp="cp -i"									# Ask before copying over an existing file
 alias ln="ln -i"									# Ask before creating a link
 alias mv="mv -i"									# Ask before overwriting
-alias rm="rm -I --preserve-root"	# Ask once before removing  more  than  three files or  when removing  recursively
 
 # Create necessary parent directories
 alias mkdir="mkdir -p"
