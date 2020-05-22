@@ -77,3 +77,4 @@ man() {					#all of the less stuff but for man
 ###############################################################################
 # Start hugo server as a background process and log output
 alias gohugo="nohup hugo server &>> nohup-hugo-server.log &"
+alias stophugo="pkill hugo"
