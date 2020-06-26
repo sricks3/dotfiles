@@ -17,6 +17,9 @@
 # Add ~/git/scripts to PATH
 PATH="$PATH:~/git/scripts";export PATH
 
+# Add ~/.cargo/bin/ to PATH
+PATH="$PATH:~/.cargo/bin"
+
 # Set default command line editor to vim if it is installed, and use vim instead of vi
 if hash vim 2>/dev/null; then
 	export VISUAL=vim
@@ -77,4 +80,3 @@ man() {					#all of the less stuff but for man
 ###############################################################################
 # Start hugo server as a background process and log output
 alias gohugo="nohup hugo server &>> nohup-hugo-server.log &"
-alias stophugo="pkill hugo"
