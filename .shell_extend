@@ -15,7 +15,7 @@
 # GENERAL CONFIGURATION
 ################################################################################
 # Add ~/git/scripts to PATH
-PATH="$PATH:~/git/scripts";export PATH
+PATH="$PATH:~/git/scripts:~/git/scripts/onstart";export PATH
 
 # Set default command line editor to vim if it is installed, and use vim instead of vi
 if hash vim 2>/dev/null; then
