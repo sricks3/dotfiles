@@ -17,6 +17,9 @@
 # Add ~/workspaces/scripts to PATH
 PATH="$PATH:~/workspaces/scripts:~/workspaces/scripts/onstart";export PATH
 
+# Add ~/.cargo/bin/ to PATH
+PATH="$PATH:~/.cargo/bin"
+
 # Set default command line editor to vim if it is installed, and use vim instead of vi
 if hash vim 2>/dev/null; then
 	export VISUAL=vim
