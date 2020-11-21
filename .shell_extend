@@ -15,10 +15,9 @@
 # GENERAL CONFIGURATION
 ################################################################################
 # Add ~/workspaces/scripts to PATH
-PATH="$PATH:~/workspaces/scripts:~/workspaces/scripts/onstart";export PATH
-
-# Add ~/.cargo/bin/ to PATH
-PATH="$PATH:~/.cargo/bin"
+PATH="$PATH:$HOME/workspaces/scripts:$HOME/workspaces/scripts/onstart"
+PATH="$PATH:$HOME/.cargo/bin"
+export PATH
 
 # Set default command line editor to vim if it is installed, and use vim instead of vi
 if hash vim 2>/dev/null; then
